@@ -1,0 +1,4 @@
+numpy
+nltk          # sentence splitting, same as the baselines (run: python -c "import nltk; nltk.download('punkt_tab')")
+rouge-score   # official ROUGE, to cross-check rouge_lite.py
+pyarrow       # only for tools/convert_raw.py on .parquet files

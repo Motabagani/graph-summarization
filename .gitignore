@@ -1,0 +1,16 @@
+# environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# datasets: rebuild with ranking/tools/fetch_samples.py or ranking/tools/convert_raw.py
+# (full datasets live on the HPC, in the team scratch folder)
+data_raw/
+data_sample/
+*.parquet
+*.csv.gz
+
+# OS / editor
+.DS_Store
+.idea/
