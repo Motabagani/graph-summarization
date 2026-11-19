@@ -36,6 +36,7 @@ try:  # identical to the TextRank baseline when gensim is installed (it is on HP
     from gensim.parsing.preprocessing import STOPWORDS as _GENSIM_STOP
 
     STOP_WORDS = set(_GENSIM_STOP)
+    STOP_LIST = "gensim"
 except ImportError:  # fallback: the course's closed-class list (HW4 stop_list.py)
     STOP_WORDS = set("""a the an and or but about above after along amid among as at by for
     from in into like minus near of off on onto out over past per plus since till to under
@@ -48,6 +49,7 @@ except ImportError:  # fallback: the course's closed-class list (HW4 stop_list.p
     anybody anyone anyplace anything anytime anywhere everybody everyday everyone everyplace
     everything everywhere whatever whenever wherever whichever whoever whomever he him she it
     they them we us you i me""".split())
+    STOP_LIST = "hw4-closed-class"
 
 _stemmer = PorterStemmer()
 _stem_cache: dict[str, str] = {}

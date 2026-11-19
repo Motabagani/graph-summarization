@@ -7,9 +7,11 @@
 | `pagetrust.py` | Vectorized PageRank, PageTrust and degree centrality, plus PacSum thresholding and a PacSum signed-graph builder. |
 | `selector.py` | Turns vertex scores into a summary using the baselines' per-dataset budgets, and combines clause scores into sentence scores. |
 | `pipeline.py` | Glue code, using a stand-in graph (tf-idf weights with PacSum position direction) until the BERT Grapher and Directioner exist. |
-| `run.py` | Runs one ranker over a JSONL dataset sample and prints mean ROUGE. |
+| `run.py` | Runs one ranker over a JSONL dataset and prints mean ROUGE (`--rouge official` uses rouge-score). |
 | `rouge_lite.py` | ROUGE-1 / -2 / -Lsum F1 with stemming. It matches `rouge-score` to within 0.05. Use it for local comparisons only. |
 | `tools/sweep.py` | Runs Lead, PacSum degree, PageRank and the PageTrust grid on every sample, and writes a CSV to `results/`. |
+| `tools/prepare_data.py` | Converts a full dataset file (parquet / csv / json / HF folder) into the JSONL the scripts read. Has a `--peek` mode. |
+| `hpc/` | `setup.sh`, plus Slurm jobs `sweep.sbatch` (one dataset per array task) and `run.sbatch`. See [HPC.md](HPC.md). |
 | `tools/fetch_samples.py`, `tools/convert_raw.py` | Build the 100-document samples in `data_sample/`, from the Hugging Face API or from files you downloaded by hand. |
 | `results/` | Sample sweep results and their summary. These are for debugging and aren't reportable. |
 | `tests/test_all.py` | 22 tests, including the paper's Figure 2 example. From the repo root, run `.venv/bin/python -m unittest discover -s ranking/tests -v`. |

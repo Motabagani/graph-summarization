@@ -99,3 +99,22 @@ def rouge(pred: str, ref: str) -> tuple[float, float, float]:
     rs = [t for t in (tokens(l) for l in ref.split("\n")) if t]
     out.append(_rouge_lsum(ps, rs))
     return tuple(100 * x for x in out)
+
+
+_official = None
+
+
+def rouge_official(pred: str, ref: str) -> tuple[float, float, float]:
+    """Same output as rouge(), computed with Google's rouge-score package
+    (rouge1 / rouge2 / rougeLsum F1, Porter stemmer). Use this for reportable numbers."""
+    global _official
+    if _official is None:
+        from rouge_score import rouge_scorer
+        _official = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeLsum"], use_stemmer=True)
+    s = _official.score(ref, pred)
+    return tuple(100 * s[k].fmeasure for k in ("rouge1", "rouge2", "rougeLsum"))
+
+
+def get_scorer(kind: str = "lite"):
+    """"lite" (this file, fast, no dependency) or "official" (rouge-score)."""
+    return {"lite": rouge, "official": rouge_official}[kind]

@@ -37,4 +37,6 @@ cd graph
 ../.venv/bin/python tests/test_team_compat.py   # checks graph/ against ranking/
 ```
 
+**Running on the HPC:** follow [ranking/HPC.md](ranking/HPC.md) (setup, data conversion, Slurm jobs).
+
 The datasets aren't in the repo. The full ones are on the HPC, in the team scratch folder (ask Finley for the path). To build the 100-document local samples, run `ranking/tools/fetch_samples.py`, or `ranking/tools/convert_raw.py` on files you downloaded by hand.

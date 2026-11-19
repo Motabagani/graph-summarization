@@ -2,6 +2,7 @@
 .venv/
 venv/
 __pycache__/
+.nltk_data/
 *.pyc
 
 # datasets: rebuild with ranking/tools/fetch_samples.py or ranking/tools/convert_raw.py
