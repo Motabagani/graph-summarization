@@ -11,7 +11,7 @@ Each person has their own folder, so nobody's files clash.
 |---|---|---|
 | `ranking/` | Hashim Motabagani | Preprocessor, PageTrust ranker, sentence selector, local sweep tools. See [ranking/README.md](ranking/README.md). |
 | `baselines/` | Finley Torrens | Baselines (Lead, Oracle, TextRank, DegreeCentrality, LexPageRank, PacSum) and evaluation. *To be added.* |
-| `graph/` | Alfardil Alam | BERT Grapher and NSP Directioner. *To be added.* |
+| `graph/` | Alfardil Alam | BERT Grapher and NSP Directioner, plus a dev/test evaluation harness. See [graph/README.md](graph/README.md). |
 
 ## Interface between folders
 The Directioner hands the ranker one numpy array `W` of shape (n, n) per document:
@@ -27,6 +27,14 @@ python3 -m venv .venv
 .venv/bin/pip install -r ranking/requirements.txt
 .venv/bin/python -c "import nltk; nltk.download('punkt_tab')"
 .venv/bin/python -m unittest discover -s ranking/tests -v
+```
+
+For `graph/` (needs PyTorch and BERT; run from inside `graph/`):
+```bash
+cd graph
+../.venv/bin/pip install -r requirements.txt
+../.venv/bin/python -m spacy download en_core_web_sm
+../.venv/bin/python tests/test_team_compat.py   # checks graph/ against ranking/
 ```
 
 The datasets aren't in the repo. The full ones are on the HPC, in the team scratch folder (ask Finley for the path). To build the 100-document local samples, run `ranking/tools/fetch_samples.py`, or `ranking/tools/convert_raw.py` on files you downloaded by hand.
