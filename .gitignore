@@ -15,3 +15,7 @@ data_sample/
 # OS / editor
 .DS_Store
 .idea/
+
+# local smoke-test output of runhpcHashim.py
+ranking/results/sweep_local*.csv
+ranking/results/*LOCAL_TEST*

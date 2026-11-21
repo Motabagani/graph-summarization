@@ -50,6 +50,38 @@ def read_rows(path):
         return [json.loads(l) for l in f if l.strip()], "json lines"
 
 
+def convert(name, rows, article_col, summary_col, out_dir, n=None, start_frac=0.0, end_frac=1.0,
+            id_col=None, fmt=""):
+    """rows (from read_rows) -> <out_dir>/<name>.jsonl. Returns the number of docs written."""
+    if isinstance(rows, str):
+        rows, fmt = read_rows(rows)
+    for c in (article_col, summary_col):
+        if c not in rows[0]:
+            sys.exit(f"{name}: column {c!r} not in {list(rows[0])}")
+    lo, hi = int(start_frac * len(rows)), int(end_frac * len(rows))
+    idx = list(range(lo, hi))
+    if n and n < len(idx):
+        idx = [idx[int(i * len(idx) / n)] for i in range(n)]
+    os.makedirs(out_dir, exist_ok=True)
+    dest = os.path.join(out_dir, f"{name}.jsonl")
+    kept = 0
+    with open(dest, "w", encoding="utf-8") as f:
+        for i in idx:
+            r = rows[i]
+            art, summ = r.get(article_col), r.get(summary_col)
+            if not art or not summ:
+                continue
+            if isinstance(summ, list) and name not in ("arxiv", "pubmed"):
+                summ = "\n".join(map(str, summ))
+            if name == "wikihow" and isinstance(summ, str):   # same as the local samples
+                summ = " ".join(s.strip().rstrip(",") for s in summ.split("\n") if s.strip())
+            rid = r.get(id_col) if id_col else f"{name}-{i}"
+            f.write(json.dumps({"id": str(rid), "article": art, "summary": summ}, ensure_ascii=False) + "\n")
+            kept += 1
+    print(f"{name}: wrote {kept} docs (rows {lo}-{hi} of {len(rows)}, {fmt}) -> {dest}")
+    return kept
+
+
 def short(v, k=300):
     if isinstance(v, list):
         return f"list of {len(v)}: {[short(x, 80) for x in v[:3]]}"
@@ -81,33 +113,8 @@ def main():
         return
     if not (a.name and a.article_col and a.summary_col and a.out):
         ap.error("converting needs: name, --article-col, --summary-col, --out (run --peek first)")
-    for c in (a.article_col, a.summary_col):
-        if c not in rows[0]:
-            sys.exit(f"column {c!r} not in {list(rows[0])}")
-
-    lo, hi = int(a.start_frac * len(rows)), int(a.end_frac * len(rows))
-    idx = list(range(lo, hi))
-    if a.n and a.n < len(idx):
-        idx = [idx[int(i * len(idx) / a.n)] for i in range(a.n)]
-
-    os.makedirs(a.out, exist_ok=True)
-    dest = os.path.join(a.out, f"{a.name}.jsonl")
-    kept = 0
-    with open(dest, "w", encoding="utf-8") as f:
-        for i in idx:
-            r = rows[i]
-            art, summ = r.get(a.article_col), r.get(a.summary_col)
-            if not art or not summ:
-                continue
-            if isinstance(summ, list) and a.name not in ("arxiv", "pubmed"):
-                summ = "\n".join(map(str, summ))
-            if a.name == "wikihow" and isinstance(summ, str):   # same as the local samples
-                summ = " ".join(s.strip().rstrip(",") for s in summ.split("\n") if s.strip())
-            rid = r.get(a.id_col) if a.id_col else f"{a.name}-{i}"
-            f.write(json.dumps({"id": str(rid), "article": art, "summary": summ}, ensure_ascii=False) + "\n")
-            kept += 1
-    print(f"{a.name}: wrote {kept} docs (rows {lo}-{hi} of {len(rows)}, {fmt}) -> {dest}")
-
+    convert(a.name, rows, a.article_col, a.summary_col, a.out, n=a.n, start_frac=a.start_frac,
+            end_frac=a.end_frac, id_col=a.id_col, fmt=fmt)
 
 if __name__ == "__main__":
     main()

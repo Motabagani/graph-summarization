@@ -37,6 +37,6 @@ cd graph
 ../.venv/bin/python tests/test_team_compat.py   # checks graph/ against ranking/
 ```
 
-**Running on the HPC:** follow [ranking/HPC.md](ranking/HPC.md) (setup, data conversion, Slurm jobs).
+**Running on the HPC:** fill in the CONFIG block of [runhpcHashim.py](runhpcHashim.py), then run `python3 runhpcHashim.py` on a login node. It submits everything and writes `ranking/results/hashim_results.xlsx`. Details and the manual route are in [ranking/HPC.md](ranking/HPC.md).
 
 The datasets aren't in the repo. The full ones are on the HPC, in the team scratch folder (ask Finley for the path). To build the 100-document local samples, run `ranking/tools/fetch_samples.py`, or `ranking/tools/convert_raw.py` on files you downloaded by hand.

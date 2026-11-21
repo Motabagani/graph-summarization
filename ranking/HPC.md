@@ -6,6 +6,29 @@ stand-in tf-idf graph) on the full datasets. Everything below is copy-paste. Run
 
 Requirements: Python **3.9 or newer**, and a Slurm cluster. Nothing needs a GPU.
 
+## Quick route: one command → Excel
+
+`runhpcHashim.py` (at the repo root) runs steps 1–5 below for you, then writes
+**`ranking/results/hashim_results.xlsx`**. That file has a Summary table of the 6 datasets ×
+Lead / PacSum / PageRank / PageTrust, the chosen settings, every dev result and the run info.
+
+1. Clone the repo and open `runhpcHashim.py`. In the **CONFIG** block at the top, fill in each
+   dataset's file path and column names. Print a file's columns with
+   `python3 ranking/tools/prepare_data.py --peek <file>`. Datasets left as `EDIT_ME` are skipped.
+   Set `ACCOUNT` too if your cluster needs one.
+2. On a login node, from the repo root:
+   ```bash
+   python3 runhpcHashim.py
+   ```
+   It sets up the environment (first time only), converts the data, and submits the sweep jobs
+   plus a report job that waits for them.
+3. `squeue --me` until the jobs are gone, then send back `ranking/results/hashim_results.xlsx`.
+
+If only the report step failed, rerun it with `python3 runhpcHashim.py report`. To test the
+whole thing on the local samples without Slurm, use `python3 runhpcHashim.py local --limit 5`.
+
+The rest of this page is the same thing done by hand, step by step.
+
 ---
 
 ## 1. One-time setup (on a login node; it needs internet)
