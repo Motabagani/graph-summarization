@@ -1,0 +1,49 @@
+{
+  "method": "lead3",
+  "dataset": "pubmed",
+  "split": "test",
+  "files": [
+    "../datasets/long_summarization/pubmed-dataset/test.txt"
+  ],
+  "documents": 6658,
+  "seconds": 7.83,
+  "docs_per_sec": 850.1,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {},
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 203,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.35951240162464515,
+      "recall": 0.38056386621539584,
+      "f1": 0.3522118008345834,
+      "n": 6658
+    },
+    "rouge2": {
+      "precision": 0.12133727034826738,
+      "recall": 0.1330137451121954,
+      "f1": 0.12057418241496327,
+      "n": 6658
+    },
+    "rougeL": {
+      "precision": 0.19708328097021846,
+      "recall": 0.2147056819131713,
+      "f1": 0.19515001173359786,
+      "n": 6658
+    },
+    "rougeLsum": {
+      "precision": 0.32444037683243554,
+      "recall": 0.3429707866647622,
+      "f1": 0.31771173809703074,
+      "n": 6658
+    }
+  }
+}

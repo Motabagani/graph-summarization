@@ -1,0 +1,65 @@
+{
+  "method": "textrank",
+  "dataset": "arxiv",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/arxiv-dataset/test.txt"
+  ],
+  "documents": 6440,
+  "seconds": 23.51,
+  "docs_per_sec": 273.9,
+  "converged_fraction": 1.0,
+  "mean_iterations": 21.04,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "tfidf_dot",
+    "preprocess": "gensim",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "dangling": "none"
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 220,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.26129166639815304,
+      "recall": 0.3683120048504456,
+      "f1": 0.2946535827304099,
+      "n": 6440
+    },
+    "rouge2": {
+      "precision": 0.06597701483550462,
+      "recall": 0.09282813580506956,
+      "f1": 0.07435410922145075,
+      "n": 6440
+    },
+    "rougeL": {
+      "precision": 0.13398926830518712,
+      "recall": 0.19336562220950462,
+      "f1": 0.15225068939956632,
+      "n": 6440
+    },
+    "rougeLsum": {
+      "precision": 0.21889349335273192,
+      "recall": 0.3079017975708827,
+      "f1": 0.24659380873853912,
+      "n": 6440
+    }
+  }
+}

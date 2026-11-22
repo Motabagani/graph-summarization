@@ -1,0 +1,73 @@
+{
+  "method": "pacsum",
+  "dataset": "wikihow",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/wikihow/manual/wikihowAll.csv"
+  ],
+  "documents": 213294,
+  "seconds": 59.4,
+  "docs_per_sec": 3590.67,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "rep": "tfidf",
+    "sim": "cosine",
+    "beta": 0.0,
+    "lambda1": 0.1,
+    "lambda2": 0.9,
+    "extract_num": 0,
+    "seed": 0,
+    "bert_model": "",
+    "bert_config": "bert-base-uncased",
+    "bert_vocab": "bert-base-uncased",
+    "max_len": 60,
+    "device": "auto",
+    "batch_size": 64
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": true,
+    "word_limit": 55,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "beta": 0.0,
+      "lambda1": 0.1,
+      "lambda2": 0.9
+    },
+    "best_f1": 0.24274840516902552
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.2681254989911229,
+      "recall": 0.29782862141370936,
+      "f1": 0.2437064060029556,
+      "n": 213293
+    },
+    "rouge2": {
+      "precision": 0.0645669686384966,
+      "recall": 0.07358559191629416,
+      "f1": 0.05851985605527697,
+      "n": 213293
+    },
+    "rougeL": {
+      "precision": 0.16731035949084552,
+      "recall": 0.1946233022358356,
+      "f1": 0.15398488128974522,
+      "n": 213293
+    },
+    "rougeLsum": {
+      "precision": 0.24742433901470356,
+      "recall": 0.2763927836391749,
+      "f1": 0.22529739449618277,
+      "n": 213293
+    }
+  }
+}

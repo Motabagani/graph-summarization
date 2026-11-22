@@ -1,0 +1,31 @@
+{
+  "metric": "rouge1",
+  "documents": 1000,
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/pubmed-dataset/val.txt"
+  ],
+  "best": {
+    "threshold": 0.1
+  },
+  "best_f1": 0.39735849100094206,
+  "results": [
+    {
+      "params": {
+        "threshold": 0.1
+      },
+      "f1": 0.39735849100094206
+    },
+    {
+      "params": {
+        "threshold": 0.2
+      },
+      "f1": 0.3854270415717735
+    },
+    {
+      "params": {
+        "threshold": 0.3
+      },
+      "f1": 0.369385857462482
+    }
+  ]
+}

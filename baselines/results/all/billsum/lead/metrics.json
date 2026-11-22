@@ -1,0 +1,49 @@
+{
+  "method": "lead3",
+  "dataset": "billsum",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/billsum/data/test-00000-of-00001.parquet"
+  ],
+  "documents": 3269,
+  "seconds": 6.33,
+  "docs_per_sec": 516.18,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {},
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 184,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.38650557134580704,
+      "recall": 0.4824630554091598,
+      "f1": 0.3893925147583114,
+      "n": 3269
+    },
+    "rouge2": {
+      "precision": 0.17564495772066926,
+      "recall": 0.22834235128252847,
+      "f1": 0.17861165010235555,
+      "n": 3269
+    },
+    "rougeL": {
+      "precision": 0.23904488721849482,
+      "recall": 0.31616729039904823,
+      "f1": 0.24551800159281387,
+      "n": 3269
+    },
+    "rougeLsum": {
+      "precision": 0.30899456442280643,
+      "recall": 0.38913632457722264,
+      "f1": 0.3113827822290314,
+      "n": 3269
+    }
+  }
+}

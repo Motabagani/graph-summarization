@@ -1,0 +1,31 @@
+{
+  "metric": "rouge1",
+  "documents": 1000,
+  "files": [
+    "/scratch/ft2377/NLP/datasets/billsum/data/train-00000-of-00001.parquet"
+  ],
+  "best": {
+    "threshold": 0.2
+  },
+  "best_f1": 0.41039417553046714,
+  "results": [
+    {
+      "params": {
+        "threshold": 0.2
+      },
+      "f1": 0.41039417553046714
+    },
+    {
+      "params": {
+        "threshold": 0.1
+      },
+      "f1": 0.408959226433437
+    },
+    {
+      "params": {
+        "threshold": 0.3
+      },
+      "f1": 0.4064196723142538
+    }
+  ]
+}

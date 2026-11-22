@@ -1,0 +1,72 @@
+{
+  "method": "pacsum",
+  "dataset": "cnn_dailymail",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/cnn_dailymail/cnn_dailymail/test.csv"
+  ],
+  "documents": 11490,
+  "seconds": 4.98,
+  "docs_per_sec": 2306.36,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "rep": "tfidf",
+    "beta": 0.0,
+    "lambda1": 0.7,
+    "lambda2": 0.30000000000000004,
+    "extract_num": 3,
+    "seed": 0,
+    "bert_model": "",
+    "bert_config": "bert-base-uncased",
+    "bert_vocab": "bert-base-uncased",
+    "max_len": 60,
+    "device": "auto",
+    "batch_size": 64
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 3,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "beta": 0.0,
+      "lambda1": 0.7,
+      "lambda2": 0.30000000000000004
+    },
+    "best_f1": 0.3973722246219601
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.3246867432929654,
+      "recall": 0.51741303072569,
+      "f1": 0.386700428087021,
+      "n": 11490
+    },
+    "rouge2": {
+      "precision": 0.1423372624188546,
+      "recall": 0.22631135666366486,
+      "f1": 0.1691443614289771,
+      "n": 11490
+    },
+    "rougeL": {
+      "precision": 0.19913450772514016,
+      "recall": 0.3207911030816026,
+      "f1": 0.2380314670754921,
+      "n": 11490
+    },
+    "rougeLsum": {
+      "precision": 0.2956843009082974,
+      "recall": 0.4705940674808384,
+      "f1": 0.352006896905583,
+      "n": 11490
+    }
+  }
+}

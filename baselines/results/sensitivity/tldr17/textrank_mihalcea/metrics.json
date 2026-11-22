@@ -1,0 +1,65 @@
+{
+  "method": "textrank",
+  "dataset": "tldr17",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/tldr17/corpus-webis-tldr-17.json"
+  ],
+  "documents": 3847330,
+  "seconds": 411.95,
+  "docs_per_sec": 9339.23,
+  "converged_fraction": 1.0,
+  "mean_iterations": 9.74,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "overlap",
+    "preprocess": "basic",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "dangling": "none"
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 1,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.1648085927959637,
+      "recall": 0.22540445552409663,
+      "f1": 0.16433670338852252,
+      "n": 3847330
+    },
+    "rouge2": {
+      "precision": 0.02678166729840729,
+      "recall": 0.03696149044240436,
+      "f1": 0.026521601831162075,
+      "n": 3847330
+    },
+    "rougeL": {
+      "precision": 0.1136126222697032,
+      "recall": 0.16566345340136485,
+      "f1": 0.1158900710658708,
+      "n": 3847330
+    },
+    "rougeLsum": {
+      "precision": 0.11845710197145959,
+      "recall": 0.1685509018615538,
+      "f1": 0.11907831520422531,
+      "n": 3847330
+    }
+  }
+}

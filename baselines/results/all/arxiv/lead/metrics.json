@@ -1,0 +1,49 @@
+{
+  "method": "lead3",
+  "dataset": "arxiv",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/arxiv-dataset/test.txt"
+  ],
+  "documents": 6440,
+  "seconds": 7.92,
+  "docs_per_sec": 812.94,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {},
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 220,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.3006175876242164,
+      "recall": 0.417455035500379,
+      "f1": 0.3373414874057028,
+      "n": 6440
+    },
+    "rouge2": {
+      "precision": 0.07882699846369753,
+      "recall": 0.11212862702451301,
+      "f1": 0.08912966256100033,
+      "n": 6440
+    },
+    "rougeL": {
+      "precision": 0.15261122956394738,
+      "recall": 0.21705169546170364,
+      "f1": 0.17260871366939262,
+      "n": 6440
+    },
+    "rougeLsum": {
+      "precision": 0.26598448619166465,
+      "recall": 0.3686396593860154,
+      "f1": 0.2982177741737619,
+      "n": 6440
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "method": "lexpagerank",
+  "dataset": "arxiv",
+  "split": "test",
+  "files": [
+    "../datasets/long_summarization/arxiv-dataset/test.txt"
+  ],
+  "documents": 6440,
+  "seconds": 22.38,
+  "docs_per_sec": 287.74,
+  "converged_fraction": 1.0,
+  "mean_iterations": 29.03,
+  "method_config": {
+    "threshold": 0.1,
+    "continuous": true,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "self_loops": true,
+    "dangling": "uniform",
+    "idf_source": "train",
+    "idf_docs": 20000,
+    "idf_cache": "../datasets/.cache/idf_8ef62e4698ef.json",
+    "lowercase": true,
+    "stem": false,
+    "min_sentence_words": 0
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 220,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.3389611163478511,
+      "recall": 0.4689142577202732,
+      "f1": 0.38067550873868355,
+      "n": 6440
+    },
+    "rouge2": {
+      "precision": 0.11169597862902919,
+      "recall": 0.1560259632360959,
+      "f1": 0.1258168308779894,
+      "n": 6440
+    },
+    "rougeL": {
+      "precision": 0.17441681582486335,
+      "recall": 0.24808954991873455,
+      "f1": 0.19781038442396495,
+      "n": 6440
+    },
+    "rougeLsum": {
+      "precision": 0.2956529652898344,
+      "recall": 0.4082160663007589,
+      "f1": 0.3317572425623549,
+      "n": 6440
+    }
+  }
+}

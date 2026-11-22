@@ -1,0 +1,65 @@
+{
+  "method": "textrank",
+  "dataset": "wikihow",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/wikihow/manual/wikihowAll.csv"
+  ],
+  "documents": 213294,
+  "seconds": 41.49,
+  "docs_per_sec": 5140.81,
+  "converged_fraction": 1.0,
+  "mean_iterations": 8.33,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "overlap",
+    "preprocess": "basic",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "dangling": "none"
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": true,
+    "word_limit": 55,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.266845127429099,
+      "recall": 0.2951942203795797,
+      "f1": 0.2423052049966287,
+      "n": 213293
+    },
+    "rouge2": {
+      "precision": 0.06283619379133859,
+      "recall": 0.070820817935869,
+      "f1": 0.056717223547227455,
+      "n": 213293
+    },
+    "rougeL": {
+      "precision": 0.16716860570700315,
+      "recall": 0.19344798702944643,
+      "f1": 0.153601339638422,
+      "n": 213293
+    },
+    "rougeLsum": {
+      "precision": 0.24165088142224417,
+      "recall": 0.2688405381000236,
+      "f1": 0.21971990749086057,
+      "n": 213293
+    }
+  }
+}

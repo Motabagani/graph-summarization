@@ -1,0 +1,60 @@
+{
+  "method": "degree_centrality",
+  "dataset": "pubmed",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/pubmed-dataset/test.txt"
+  ],
+  "documents": 6658,
+  "seconds": 11.0,
+  "docs_per_sec": 605.01,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "tfidf_dot",
+    "preprocess": "gensim",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 203,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.34899927910250345,
+      "recall": 0.3622717810413796,
+      "f1": 0.3386031978240072,
+      "n": 6658
+    },
+    "rouge2": {
+      "precision": 0.10803063276643841,
+      "recall": 0.11038363666628673,
+      "f1": 0.10390935098907336,
+      "n": 6658
+    },
+    "rougeL": {
+      "precision": 0.18003339548131206,
+      "recall": 0.19028121636850848,
+      "f1": 0.1756013138216999,
+      "n": 6658
+    },
+    "rougeLsum": {
+      "precision": 0.2968887198752815,
+      "recall": 0.3077880273944099,
+      "f1": 0.28790161672694425,
+      "n": 6658
+    }
+  }
+}

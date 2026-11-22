@@ -1,0 +1,73 @@
+{
+  "method": "pacsum",
+  "dataset": "pubmed",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/pubmed-dataset/test.txt"
+  ],
+  "documents": 6658,
+  "seconds": 10.35,
+  "docs_per_sec": 643.08,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "rep": "tfidf",
+    "sim": "cosine",
+    "beta": 0.0,
+    "lambda1": 0.4,
+    "lambda2": 0.6,
+    "extract_num": 0,
+    "seed": 0,
+    "bert_model": "",
+    "bert_config": "bert-base-uncased",
+    "bert_vocab": "bert-base-uncased",
+    "max_len": 60,
+    "device": "auto",
+    "batch_size": 64
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 203,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "beta": 0.0,
+      "lambda1": 0.4,
+      "lambda2": 0.6
+    },
+    "best_f1": 0.3999061765331145
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.410384192286718,
+      "recall": 0.4209740399720182,
+      "f1": 0.3962947743759268,
+      "n": 6658
+    },
+    "rouge2": {
+      "precision": 0.15859170706461584,
+      "recall": 0.16177100339487363,
+      "f1": 0.15255972086486275,
+      "n": 6658
+    },
+    "rougeL": {
+      "precision": 0.20988481699580605,
+      "recall": 0.22020737636777293,
+      "f1": 0.2041454448539271,
+      "n": 6658
+    },
+    "rougeLsum": {
+      "precision": 0.366377396879834,
+      "recall": 0.3752477680941953,
+      "f1": 0.3535782114694632,
+      "n": 6658
+    }
+  }
+}

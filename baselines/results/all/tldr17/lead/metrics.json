@@ -1,0 +1,49 @@
+{
+  "method": "lead3",
+  "dataset": "tldr17",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/tldr17/corpus-webis-tldr-17.json"
+  ],
+  "documents": 3847330,
+  "seconds": 295.09,
+  "docs_per_sec": 13037.9,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {},
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 1,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.1685350642226384,
+      "recall": 0.1384314457632854,
+      "f1": 0.12295492727728394,
+      "n": 3847330
+    },
+    "rouge2": {
+      "precision": 0.03153749902259402,
+      "recall": 0.026610507027059613,
+      "f1": 0.02286913571575473,
+      "n": 3847330
+    },
+    "rougeL": {
+      "precision": 0.1335786353690963,
+      "recall": 0.11153859515637765,
+      "f1": 0.0973961723999445,
+      "n": 3847330
+    },
+    "rougeLsum": {
+      "precision": 0.1373657229115087,
+      "recall": 0.11295878655036884,
+      "f1": 0.09917182772790047,
+      "n": 3847330
+    }
+  }
+}

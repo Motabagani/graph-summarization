@@ -1,0 +1,73 @@
+{
+  "method": "lexpagerank",
+  "dataset": "cnn_dailymail",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/cnn_dailymail/cnn_dailymail/test.csv"
+  ],
+  "documents": 11490,
+  "seconds": 4.01,
+  "docs_per_sec": 2864.92,
+  "converged_fraction": 1.0,
+  "mean_iterations": 14.72,
+  "method_config": {
+    "impl": "paper",
+    "threshold": 0.3,
+    "continuous": false,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "self_loops": true,
+    "dangling": "uniform",
+    "idf_source": "train",
+    "idf_docs": 20000,
+    "idf_cache": "/scratch/ft2377/NLP/datasets/.cache/idf_ac6185534c63.json",
+    "lowercase": true,
+    "stem": false,
+    "min_sentence_words": 0
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 3,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "threshold": 0.3
+    },
+    "best_f1": 0.34459716949013225
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.3141788170207229,
+      "recall": 0.40271296876966384,
+      "f1": 0.3357646699798234,
+      "n": 11490
+    },
+    "rouge2": {
+      "precision": 0.11800574300651225,
+      "recall": 0.15659150131746222,
+      "f1": 0.12815748256507678,
+      "n": 11490
+    },
+    "rougeL": {
+      "precision": 0.19711806312423888,
+      "recall": 0.2551633979645419,
+      "f1": 0.211272264528839,
+      "n": 11490
+    },
+    "rougeLsum": {
+      "precision": 0.28536802537582695,
+      "recall": 0.3653313327310679,
+      "f1": 0.3047789914968102,
+      "n": 11490
+    }
+  }
+}

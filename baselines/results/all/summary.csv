@@ -1,0 +1,37 @@
+dataset,method,rouge1,rouge2,rougeL,rougeLsum,documents,length,tuned
+cnn_dailymail,Lead,38.65,17.0,24.44,35.26,11490,3 sent,
+cnn_dailymail,TextRank (tf-idf),33.14,13.09,20.41,29.89,11490,3 sent,
+cnn_dailymail,DegreeCentrality (tf-idf),32.96,13.07,20.45,29.73,11490,3 sent,
+cnn_dailymail,LexPageRank,33.58,12.82,21.13,30.48,11490,3 sent,"{""threshold"": 0.3}"
+cnn_dailymail,PacSum (tf-idf),38.67,16.91,23.8,35.2,11490,3 sent,"{""beta"": 0.0, ""lambda1"": 0.7, ""lambda2"": 0.30000000000000004}"
+cnn_dailymail,Oracle,56.06,31.21,38.46,51.66,11490,3 sent,
+pubmed,Lead,35.22,12.06,19.52,31.77,6658,203 words,
+pubmed,TextRank (tf-idf),34.2,10.51,17.63,29.06,6658,203 words,
+pubmed,DegreeCentrality (tf-idf),33.86,10.39,17.56,28.79,6658,203 words,
+pubmed,LexPageRank,40.24,14.87,20.68,35.56,6658,203 words,"{""threshold"": 0.2}"
+pubmed,PacSum (tf-idf),36.4,12.84,18.75,32.1,6658,203 words,"{""beta"": 0.0, ""lambda1"": 0.7, ""lambda2"": 0.30000000000000004}"
+pubmed,Oracle,55.93,34.02,36.65,51.79,6658,203 words,
+arxiv,Lead,33.73,8.91,17.26,29.82,6440,220 words,
+arxiv,TextRank (tf-idf),29.47,7.44,15.23,24.66,6440,220 words,
+arxiv,DegreeCentrality (tf-idf),29.1,7.33,15.08,24.38,6440,220 words,
+arxiv,LexPageRank,37.93,12.21,19.4,32.85,6440,220 words,"{""threshold"": 0.1}"
+arxiv,PacSum (tf-idf),34.31,9.41,17.1,30.05,6440,220 words,"{""beta"": 0.0, ""lambda1"": 0.9, ""lambda2"": 0.09999999999999998}"
+arxiv,Oracle,55.27,31.18,31.05,50.38,6440,220 words,
+billsum,Lead,38.94,17.86,24.55,31.14,3269,184 words,
+billsum,TextRank (tf-idf),38.63,16.39,22.97,28.66,3269,184 words,
+billsum,DegreeCentrality (tf-idf),38.48,16.26,22.89,28.53,3269,184 words,
+billsum,LexPageRank,40.57,18.44,23.72,31.23,3269,184 words,"{""threshold"": 0.2}"
+billsum,PacSum (tf-idf),39.35,17.3,23.8,29.8,3269,184 words,"{""beta"": 0.0, ""lambda1"": 0.0, ""lambda2"": 1.0}"
+billsum,Oracle,58.96,38.44,43.3,49.56,3269,184 words,
+wikihow,Lead,22.57,4.99,14.56,20.94,213294,55 words,
+wikihow,TextRank (tf-idf),23.69,5.51,15.02,21.59,213294,55 words,
+wikihow,DegreeCentrality (tf-idf),23.56,5.48,14.99,21.48,213294,55 words,
+wikihow,LexPageRank,24.91,6.13,15.77,22.95,213294,55 words,"{""threshold"": 0.1}"
+wikihow,PacSum (tf-idf),23.53,5.34,14.83,21.67,213294,55 words,"{""beta"": 0.1, ""lambda1"": 0.7, ""lambda2"": 0.30000000000000004}"
+wikihow,Oracle,35.47,12.4,23.02,32.76,213294,55 words,
+tldr17,Lead,12.3,2.29,9.74,9.92,3847330,1 sent,
+tldr17,TextRank (tf-idf),15.41,2.65,11.2,11.49,3847330,1 sent,
+tldr17,DegreeCentrality (tf-idf),15.38,2.66,11.19,11.48,3847330,1 sent,
+tldr17,LexPageRank,14.66,2.69,11.09,11.32,3847330,1 sent,"{""threshold"": 0.1}"
+tldr17,PacSum (tf-idf),14.75,2.52,10.98,11.23,3847330,1 sent,"{""beta"": 0.0, ""lambda1"": 0.1, ""lambda2"": 0.9}"
+tldr17,Oracle,27.03,9.14,20.84,21.24,3847330,1 sent,

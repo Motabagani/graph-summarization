@@ -1,0 +1,22 @@
+# local config / secrets
+config.sh
+.kaggle/
+kaggle.json
+access_token
+
+# data and big outputs
+data/
+datasets/
+.nltk_data/
+**/predictions.jsonl
+*.zip
+*.tar.gz
+
+# runtime
+logs/*
+!logs/.gitkeep
+__pycache__/
+*.pyc
+.cache/
+.DS_Store
+__MACOSX/

@@ -1,0 +1,12 @@
+
+pubmed: HipoRank LexRank = 39.19 / 13.89
+  ours, paper-faithful (thresholded)      40.24  14.87   diff  +1.05  +0.98   (203 words)
+  ours, paper-faithful (continuous)       40.51  15.37   diff  +1.32  +1.48   (203 words)
+  sumy LexRank, word budget               39.69  14.34   diff  +0.50  +0.45   (203 words)
+  sumy LexRank, k sentences              not run
+
+arxiv: HipoRank LexRank = 33.85 / 10.73
+  ours, paper-faithful (thresholded)      37.93  12.21   diff  +4.08  +1.48   (220 words)
+  ours, paper-faithful (continuous)       38.07  12.58   diff  +4.22  +1.85   (220 words)
+  sumy LexRank, word budget              not run
+  sumy LexRank, k sentences              not run

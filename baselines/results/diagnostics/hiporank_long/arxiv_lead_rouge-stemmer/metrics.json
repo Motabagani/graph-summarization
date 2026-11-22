@@ -1,0 +1,49 @@
+{
+  "method": "lead3",
+  "dataset": "arxiv",
+  "split": "test",
+  "files": [
+    "../datasets/long_summarization/arxiv-dataset/test.txt"
+  ],
+  "documents": 6440,
+  "seconds": 8.28,
+  "docs_per_sec": 778.13,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {},
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 220,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": true,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.32194271961631116,
+      "recall": 0.44712553885451634,
+      "f1": 0.36130272921681583,
+      "n": 6440
+    },
+    "rouge2": {
+      "precision": 0.0856986822546454,
+      "recall": 0.12172905519193329,
+      "f1": 0.09684891329721519,
+      "n": 6440
+    },
+    "rougeL": {
+      "precision": 0.159704389421863,
+      "recall": 0.22722728648480092,
+      "f1": 0.18065365259406804,
+      "n": 6440
+    },
+    "rougeLsum": {
+      "precision": 0.2830275770895385,
+      "recall": 0.39207231859715963,
+      "f1": 0.3172749038238057,
+      "n": 6440
+    }
+  }
+}

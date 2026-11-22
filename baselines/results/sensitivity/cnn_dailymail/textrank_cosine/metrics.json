@@ -1,0 +1,65 @@
+{
+  "method": "textrank",
+  "dataset": "cnn_dailymail",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/cnn_dailymail/cnn_dailymail/test.csv"
+  ],
+  "documents": 11490,
+  "seconds": 9.28,
+  "docs_per_sec": 1237.97,
+  "converged_fraction": 1.0,
+  "mean_iterations": 19.34,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "tfidf_cosine",
+    "preprocess": "gensim",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "dangling": "none"
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 3,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.2972618733725956,
+      "recall": 0.44499424803788173,
+      "f1": 0.34274585864971063,
+      "n": 11490
+    },
+    "rouge2": {
+      "precision": 0.11938150105644878,
+      "recall": 0.17958117112066618,
+      "f1": 0.13791838446054194,
+      "n": 11490
+    },
+    "rougeL": {
+      "precision": 0.18837766368008085,
+      "recall": 0.2848199583481995,
+      "f1": 0.21782319217815682,
+      "n": 11490
+    },
+    "rougeLsum": {
+      "precision": 0.26914684805933703,
+      "recall": 0.40208063746230704,
+      "f1": 0.31004620140633776,
+      "n": 11490
+    }
+  }
+}

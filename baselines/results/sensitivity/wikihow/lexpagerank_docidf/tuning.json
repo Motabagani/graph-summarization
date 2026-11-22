@@ -1,0 +1,31 @@
+{
+  "metric": "rouge1",
+  "documents": 1000,
+  "files": [
+    "/scratch/ft2377/NLP/datasets/wikihow/manual/wikihowAll.csv"
+  ],
+  "best": {
+    "threshold": 0.1
+  },
+  "best_f1": 0.24578098323581993,
+  "results": [
+    {
+      "params": {
+        "threshold": 0.1
+      },
+      "f1": 0.24578098323581993
+    },
+    {
+      "params": {
+        "threshold": 0.2
+      },
+      "f1": 0.23829473026472656
+    },
+    {
+      "params": {
+        "threshold": 0.3
+      },
+      "f1": 0.2289515023501012
+    }
+  ]
+}

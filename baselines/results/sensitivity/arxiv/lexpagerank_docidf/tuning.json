@@ -1,0 +1,31 @@
+{
+  "metric": "rouge1",
+  "documents": 1000,
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/arxiv-dataset/val.txt"
+  ],
+  "best": {
+    "threshold": 0.1
+  },
+  "best_f1": 0.3748336708504652,
+  "results": [
+    {
+      "params": {
+        "threshold": 0.1
+      },
+      "f1": 0.3748336708504652
+    },
+    {
+      "params": {
+        "threshold": 0.2
+      },
+      "f1": 0.3479004788191062
+    },
+    {
+      "params": {
+        "threshold": 0.3
+      },
+      "f1": 0.31216951505063156
+    }
+  ]
+}

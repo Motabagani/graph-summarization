@@ -1,0 +1,31 @@
+{
+  "metric": "rouge1",
+  "documents": 1000,
+  "files": [
+    "/scratch/ft2377/NLP/datasets/cnn_dailymail/cnn_dailymail/validation.csv"
+  ],
+  "best": {
+    "threshold": 0.3
+  },
+  "best_f1": 0.34459716949013225,
+  "results": [
+    {
+      "params": {
+        "threshold": 0.3
+      },
+      "f1": 0.34459716949013225
+    },
+    {
+      "params": {
+        "threshold": 0.1
+      },
+      "f1": 0.3436499962386528
+    },
+    {
+      "params": {
+        "threshold": 0.2
+      },
+      "f1": 0.3404073692795368
+    }
+  ]
+}

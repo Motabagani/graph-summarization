@@ -1,0 +1,18 @@
+# Core (all baselines + evaluation). Tested with Python 3.12.
+numpy
+scipy
+pandas
+pyarrow
+nltk
+rouge-score
+h5py
+gensim            # PacSum-style preprocessing; install a wheel: pip install --only-binary=:all: gensim
+matplotlib        # position analysis plots
+
+# Dataset download (slurm/download_datasets.sh)
+kaggle
+huggingface_hub
+
+# Optional
+# sumy                     # off-the-shelf LexRank comparison (lexpagerank.py --impl sumy)
+# torch transformers       # PacSum with BERT (pacsum.py --rep bert)

@@ -1,0 +1,60 @@
+{
+  "method": "degree_centrality",
+  "dataset": "tldr17",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/tldr17/corpus-webis-tldr-17.json"
+  ],
+  "documents": 3847330,
+  "seconds": 535.67,
+  "docs_per_sec": 7182.32,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "tfidf_dot",
+    "preprocess": "gensim",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 1,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.15934971389102912,
+      "recall": 0.20540690717370724,
+      "f1": 0.15383460173287314,
+      "n": 3847330
+    },
+    "rouge2": {
+      "precision": 0.027791524718780693,
+      "recall": 0.03588823706657061,
+      "f1": 0.026564489004679837,
+      "n": 3847330
+    },
+    "rougeL": {
+      "precision": 0.11402692760676024,
+      "recall": 0.1545191186638118,
+      "f1": 0.11193988479092531,
+      "n": 3847330
+    },
+    "rougeLsum": {
+      "precision": 0.11853501335084336,
+      "recall": 0.15709720362934826,
+      "f1": 0.1148168339679207,
+      "n": 3847330
+    }
+  }
+}

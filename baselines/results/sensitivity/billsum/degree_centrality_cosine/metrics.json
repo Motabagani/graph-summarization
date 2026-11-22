@@ -1,0 +1,60 @@
+{
+  "method": "degree_centrality",
+  "dataset": "billsum",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/billsum/data/test-00000-of-00001.parquet"
+  ],
+  "documents": 3269,
+  "seconds": 6.73,
+  "docs_per_sec": 485.67,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "graph": "undirected",
+    "similarity": "tfidf_cosine",
+    "preprocess": "gensim",
+    "lowercase": true,
+    "remove_stopwords": false,
+    "stem": false,
+    "pos_filter": "none",
+    "length_mode": "tokens",
+    "log_base": 2.718281828459045,
+    "min_tokens": 1
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 184,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "rouge": {
+    "rouge1": {
+      "precision": 0.390541173210341,
+      "recall": 0.4727459522388442,
+      "f1": 0.3899969651969076,
+      "n": 3269
+    },
+    "rouge2": {
+      "precision": 0.1782634992478518,
+      "recall": 0.21308246900508096,
+      "f1": 0.1766608385345831,
+      "n": 3269
+    },
+    "rougeL": {
+      "precision": 0.2311156414053628,
+      "recall": 0.29336716662640216,
+      "f1": 0.2342897863253063,
+      "n": 3269
+    },
+    "rougeLsum": {
+      "precision": 0.29694545269104655,
+      "recall": 0.3610732029062532,
+      "f1": 0.29618721573037404,
+      "n": 3269
+    }
+  }
+}

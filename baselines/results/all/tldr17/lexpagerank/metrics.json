@@ -1,0 +1,73 @@
+{
+  "method": "lexpagerank",
+  "dataset": "tldr17",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/tldr17/corpus-webis-tldr-17.json"
+  ],
+  "documents": 3847330,
+  "seconds": 428.2,
+  "docs_per_sec": 8984.99,
+  "converged_fraction": 1.0,
+  "mean_iterations": 10.05,
+  "method_config": {
+    "impl": "paper",
+    "threshold": 0.1,
+    "continuous": false,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "self_loops": true,
+    "dangling": "uniform",
+    "idf_source": "train",
+    "idf_docs": 20000,
+    "idf_cache": "/scratch/ft2377/NLP/datasets/.cache/idf_7d2e26e39054.json",
+    "lowercase": true,
+    "stem": false,
+    "min_sentence_words": 0
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 100,
+    "num_sentences": 1,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "threshold": 0.1
+    },
+    "best_f1": 0.12935962399671797
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.18031216698080035,
+      "recall": 0.17388051535315083,
+      "f1": 0.1466467997553218,
+      "n": 3847330
+    },
+    "rouge2": {
+      "precision": 0.03371439378378212,
+      "recall": 0.032460472965229345,
+      "f1": 0.02690365625846629,
+      "n": 3847330
+    },
+    "rougeL": {
+      "precision": 0.13547866038329623,
+      "recall": 0.13468645749508498,
+      "f1": 0.11089055977049798,
+      "n": 3847330
+    },
+    "rougeLsum": {
+      "precision": 0.13998950674631322,
+      "recall": 0.13662810496095887,
+      "f1": 0.11324371990827387,
+      "n": 3847330
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "method": "lexpagerank",
+  "dataset": "arxiv",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/long_summarization/arxiv-dataset/test.txt"
+  ],
+  "documents": 6440,
+  "seconds": 17.89,
+  "docs_per_sec": 359.97,
+  "converged_fraction": 1.0,
+  "mean_iterations": 23.93,
+  "method_config": {
+    "impl": "paper",
+    "threshold": 0.1,
+    "continuous": false,
+    "damping": 0.85,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "init": 1.0,
+    "self_loops": true,
+    "dangling": "uniform",
+    "idf_source": "document",
+    "idf_docs": 50000,
+    "idf_cache": "",
+    "lowercase": true,
+    "stem": false,
+    "min_sentence_words": 0
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 220,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "threshold": 0.1
+    },
+    "best_f1": 0.3748336708504652
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.33585176683132995,
+      "recall": 0.4627550731715942,
+      "f1": 0.37647501819829293,
+      "n": 6440
+    },
+    "rouge2": {
+      "precision": 0.1058898105972185,
+      "recall": 0.14656176140410251,
+      "f1": 0.1188651062137765,
+      "n": 6440
+    },
+    "rougeL": {
+      "precision": 0.17009993549187324,
+      "recall": 0.24061141196589714,
+      "f1": 0.19242654043769383,
+      "n": 6440
+    },
+    "rougeLsum": {
+      "precision": 0.2887904948910631,
+      "recall": 0.39707019552234846,
+      "f1": 0.3234406345639583,
+      "n": 6440
+    }
+  }
+}

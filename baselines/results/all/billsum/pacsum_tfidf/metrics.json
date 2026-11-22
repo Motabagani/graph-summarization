@@ -1,0 +1,72 @@
+{
+  "method": "pacsum",
+  "dataset": "billsum",
+  "split": "test",
+  "files": [
+    "/scratch/ft2377/NLP/datasets/billsum/data/test-00000-of-00001.parquet"
+  ],
+  "documents": 3269,
+  "seconds": 4.98,
+  "docs_per_sec": 657.03,
+  "converged_fraction": 1.0,
+  "mean_iterations": 0.0,
+  "method_config": {
+    "rep": "tfidf",
+    "beta": 0.0,
+    "lambda1": 0.0,
+    "lambda2": 1.0,
+    "extract_num": 0,
+    "seed": 0,
+    "bert_model": "",
+    "bert_config": "bert-base-uncased",
+    "bert_vocab": "bert-base-uncased",
+    "max_len": 60,
+    "device": "auto",
+    "batch_size": 64
+  },
+  "summary_config": {
+    "splitter": "nltk",
+    "newline_boundaries": false,
+    "word_limit": 184,
+    "num_sentences": 0,
+    "truncate": true,
+    "order": "score"
+  },
+  "rouge_stemmer": false,
+  "tuned": {
+    "metric": "rouge1",
+    "documents": 1000,
+    "best": {
+      "beta": 0.0,
+      "lambda1": 0.0,
+      "lambda2": 1.0
+    },
+    "best_f1": 0.3924632624533993
+  },
+  "rouge": {
+    "rouge1": {
+      "precision": 0.39811010028796073,
+      "recall": 0.4713310868352196,
+      "f1": 0.393461326223401,
+      "n": 3269
+    },
+    "rouge2": {
+      "precision": 0.17770219161521303,
+      "recall": 0.20371935721962384,
+      "f1": 0.1729632814972307,
+      "n": 3269
+    },
+    "rougeL": {
+      "precision": 0.23860081892769275,
+      "recall": 0.29167784487887666,
+      "f1": 0.23801281676841612,
+      "n": 3269
+    },
+    "rougeLsum": {
+      "precision": 0.30229889707413543,
+      "recall": 0.3577155470291554,
+      "f1": 0.2979741210833251,
+      "n": 3269
+    }
+  }
+}
