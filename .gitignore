@@ -19,3 +19,7 @@ data_sample/
 # local smoke-test output of runhpcHashim.py
 ranking/results/sweep_local*.csv
 ranking/results/*LOCAL_TEST*
+
+# team pipeline: intermediate files and Slurm logs
+work/
+pipeline/logs/

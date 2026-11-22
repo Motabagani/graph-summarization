@@ -48,6 +48,11 @@ def fmt(s):
     return "not run" if s is None else " / ".join(f"{x:.2f}" for x in s)
 
 
+# Team pipeline runs (pipeline/ranker.py --out results/ours/<dataset>/<name>) are added as extra rows.
+ours = sorted({n for ds in DATASETS if os.path.isdir(os.path.join(ROOT, "ours", ds))
+               for n in os.listdir(os.path.join(ROOT, "ours", ds))
+               if os.path.exists(os.path.join(ROOT, "ours", ds, n, "metrics.json"))})
+BASELINES = BASELINES + [(f"Ours: {n}", "Team pipeline", "ours", n) for n in ours]
 runs = {(b[0], ds): load(b[2], ds, b[3]) for b in BASELINES for ds in DATASETS}
 md = ["# Results: ROUGE F1 x100 (R-1 / R-2 / R-L), no stemming; R-L = summary-level (Lsum)\n",
       "| Baseline | Type | " + " | ".join(NAMES[d] for d in DATASETS) + " | Average |",
@@ -67,7 +72,7 @@ for label, typ, _, _ in BASELINES:
                          "documents": m["documents"],
                          "length": (f"{sc['num_sentences']} sentences" if sc["num_sentences"]
                                     else f"{sc['word_limit']} words"),
-                         "tuned": json.dumps(m.get("tuned", {}).get("best", ""))})
+                         "tuned": json.dumps(m.get("tuned", {}).get("best", ""), default=str)})
 
 # Direction effect: PacSum (normalized) vs DegreeCentrality (normalized) -- same graph, with/without direction
 md += ["\n## Effect of PacSum's position-based direction on the same cosine graph (ROUGE-1)\n",

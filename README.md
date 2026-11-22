@@ -10,8 +10,9 @@ Each person has their own folder, so nobody's files clash.
 | Folder | Owner | What's in it |
 |---|---|---|
 | `ranking/` | Hashim Motabagani | Preprocessor, PageTrust ranker, sentence selector, local sweep tools. See [ranking/README.md](ranking/README.md). |
-| `baselines/` | Finley Torrens | Baselines (Lead, Oracle, TextRank, DegreeCentrality, LexPageRank, PacSum) and evaluation. *To be added.* |
+| `baselines/` | Finley Torrens | Baselines (Lead, Oracle, TextRank, DegreeCentrality, LexPageRank, PacSum) and evaluation. See [baselines/README.md](baselines/README.md). |
 | `graph/` | Alfardil Alam | BERT Grapher and NSP Directioner, plus a dev/test evaluation harness. See [graph/README.md](graph/README.md). |
+| `pipeline/` | Shared | The three parts joined into one pipeline: Preprocessor → BERT Grapher → PageTrust Ranker, evaluated exactly like the baselines. See [pipeline/README.md](pipeline/README.md). |
 
 ## Interface between folders
 The Directioner hands the ranker one numpy array `W` of shape (n, n) per document:
